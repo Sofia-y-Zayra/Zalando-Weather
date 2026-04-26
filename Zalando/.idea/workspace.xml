@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8af1e4e-07fe-4513-b873-efb1e46afefb" name="Changes" comment="Three modules in the same project" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sofiagoodoy&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Sofia-y-Zayra/Zalando-Weather.git",
+    "accountId": "39f1f186-33fd-4496-bc88-9714c6b39279"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="3B2RPmvhIbnwJJ6LxyiROJtMODu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoryUtilsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ColorUtilsTest.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sofia/IdeaProject/Zalando&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/sofia/IdeaProject/Zalando/Recommendation/src/main/java/org/ulpgc/dacd/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26199.169" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8af1e4e-07fe-4513-b873-efb1e46afefb" name="Changes" comment="" />
+      <created>1773685156853</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773685156853</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Project created">
+      <option name="closed" value="true" />
+      <created>1773685338301</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1773685338301</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Project created">
+      <option name="closed" value="true" />
+      <created>1773689020328</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1773689020328</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Project created">
+      <option name="closed" value="true" />
+      <created>1773689087047</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1773689087047</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Classes for scrapping and create datebase. It need some changes and corrections">
+      <option name="closed" value="true" />
+      <created>1773965548172</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1773965548172</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Classes for scrapping and create datebase. It need some changes and corrections">
+      <option name="closed" value="true" />
+      <created>1773965608797</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1773965608797</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Corrections and translated to english. &#10;It need some refactor (for more security) and prove if the  datas save well in the database">
+      <option name="closed" value="true" />
+      <created>1774013813807</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1774013813807</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Corrections and translated to english. &#10;It need some refactor (for more security) and prove if the  datas save well in the database">
+      <option name="closed" value="true" />
+      <created>1774014130900</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1774014130900</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Code changed to Zalando (is in testing) &#10;It need to correct the way it store in de db">
+      <option name="closed" value="true" />
+      <created>1774309558461</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1774309558461</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Need refractorize it and to store the ccolor as the same way in all the products">
+      <option name="closed" value="true" />
+      <created>1774364836361</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1774364836361</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Need refractorize it">
+      <option name="closed" value="true" />
+      <created>1774391453143</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1774391453143</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Need refractorize it">
+      <option name="closed" value="true" />
+      <created>1774393025262</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1774393025262</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Code have been refactorized. It need to do the tests">
+      <option name="closed" value="true" />
+      <created>1775085615136</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1775085615136</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Code have been refactorized and tests created. Sprint 1 finalized it only need the aproval">
+      <option name="closed" value="true" />
+      <created>1775518202299</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1775518202299</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Code have been refactorized and tests created. Sprint 1 finalized it only need the aproval">
+      <option name="closed" value="true" />
+      <created>1775939533097</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1775939533097</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Weef 1 of sprint 2 . Connected the scrapping of zalando with activemq">
+      <option name="closed" value="true" />
+      <created>1776706443744</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1776706443744</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Two modules in the same project">
+      <option name="closed" value="true" />
+      <created>1776710013667</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1776710013667</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Three modules in the same project">
+      <option name="closed" value="true" />
+      <created>1777199846086</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1777199846086</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Three modules in the same project">
+      <option name="closed" value="true" />
+      <created>1777201553133</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1777201553133</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Project created" />
+    <MESSAGE value="Classes for scrapping and create datebase. It need some changes and corrections" />
+    <MESSAGE value="Corrections and translated to english. &#10;It need some refactor (for more security) and prove if the  datas save well in the database" />
+    <MESSAGE value="Code changed to Zalando (is in testing) &#10;It need to correct the way it store in de db" />
+    <MESSAGE value="Need refractorize it and to store the ccolor as the same way in all the products" />
+    <MESSAGE value="Need refractorize it" />
+    <MESSAGE value="Code have been refactorized. It need to do the tests" />
+    <MESSAGE value="Code have been refactorized and tests created. Sprint 1 finalized it only need the aproval" />
+    <MESSAGE value="Weef 1 of sprint 2 . Connected the scrapping of zalando with activemq" />
+    <MESSAGE value="Two modules in the same project" />
+    <MESSAGE value="Three modules in the same project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Three modules in the same project" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/ulpgc/dacd/control/ProductParser.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
