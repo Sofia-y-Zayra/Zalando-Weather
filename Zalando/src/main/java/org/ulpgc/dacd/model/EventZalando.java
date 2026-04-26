@@ -12,6 +12,7 @@ public class EventZalando {
         this.payload = payload;
     }
 
+
     public String getTs() { return ts; }
     public String getSs() { return ss; }
     public Object getPayload() { return payload; }
