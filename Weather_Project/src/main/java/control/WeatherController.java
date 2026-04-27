@@ -31,14 +31,14 @@ public class WeatherController {
                 if (normalized != null) {
                     Weather weather = transformer.transform(normalized);
 
-                    // REQUISITO SPRINT 2: Crear el evento con ts y ss
+
                     WeatherEvent event = new WeatherEvent(
-                            Instant.now().toString(), // ts: ahora en UTC
-                            "weather-feeder-canarias", // ss: identificador de tu fuente
+                            Instant.now().toString(),
+                            "weather-feeder-canarias",
                             weather
                     );
 
-                    // Publicar en el topic "Weather" en lugar de insertar en DB
+
                     publisher.publish("Weather", event.toJson());
 
                 } else {
