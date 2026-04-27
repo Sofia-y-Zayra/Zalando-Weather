@@ -1,8 +1,10 @@
 package org.ulpgc;
 
+
+import jakarta.jms.*;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.Message;
-import javax.jms.*;
+
 
 public class EventSubscriber {
     private static final String URL = "tcp://localhost:61616";
@@ -10,13 +12,13 @@ public class EventSubscriber {
     public void start() {
         try {
             ConnectionFactory factory = new ActiveMQConnectionFactory(URL);
-            Connection connection = (Connection) factory.createConnection();
+            Connection connection = factory.createConnection();
 
 
-            ((javax.jms.Connection) connection).setClientID("EventStoreBuilder_Global");
-            ((javax.jms.Connection) connection).start();
+            connection.setClientID("EventStoreBuilder_Global");
+            connection.start();
 
-            Session session = ((javax.jms.Connection) connection).createSession(false, Session.AUTO_ACKNOWLEDGE);
+            Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
 
             Topic productTopic = session.createTopic("Product");
