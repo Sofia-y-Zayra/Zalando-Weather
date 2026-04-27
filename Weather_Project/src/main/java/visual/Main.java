@@ -1,6 +1,7 @@
 package visual;
 
 import control.WeatherController;
+import model.WheatherApiConsumer;
 import persistence.JmsPublisher;
 
 import java.io.BufferedReader;
@@ -15,10 +16,10 @@ import java.util.concurrent.TimeUnit;
 public class Main {
 
     public static void main(String[] args) {
-        // Tu API KEY de OpenWeather
+
         String API_KEY = "2996953de5904bd3d6c74a3f049e2664";
 
-        // CARGA LAS CIUDADES DESDE TU ARCHIVO (Las 20 que tenías)
+
         List<String> cities = loadCities();
 
         if (cities.isEmpty()) {
@@ -26,7 +27,7 @@ public class Main {
             return;
         }
 
-        // Inicializamos los componentes del Sprint 2
+
         WheatherApiConsumer consumer = new WheatherApiConsumer(API_KEY);
         JmsPublisher publisher = new JmsPublisher();
 
@@ -39,11 +40,11 @@ public class Main {
             controller.run(cities);
         };
 
-        // Ejecución cada hora
+
         scheduler.scheduleAtFixedRate(task, 0, 1, TimeUnit.HOURS);
     }
 
-    // Tu método original para leer el archivo cities.txt
+
     private static List<String> loadCities() {
         List<String> cities = new ArrayList<>();
         try {
