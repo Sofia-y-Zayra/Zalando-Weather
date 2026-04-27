@@ -7,10 +7,11 @@
         <option value="$PROJECT_DIR$/Zalando/pom.xml" />
         <option value="$PROJECT_DIR$/Wheather_Project/pom.xml" />
         <option value="$PROJECT_DIR$/Recommendation/pom.xml" />
+        <option value="$PROJECT_DIR$/Weather_Project/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" project-jdk-name="graalvm-ce-24" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_24" default="true" project-jdk-name="graalvm-ce-24" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
