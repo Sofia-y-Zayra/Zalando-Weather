@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="lógica de recomendación funcionando y mapeo de datos completado">
-      <change afterPath="$PROJECT_DIR$/datamart_final.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eventstore/Product/zalando-feeder/20260428.events" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/DatamartStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/DatamartStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/RecommendationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/RecommendationAPI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777386710901</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="lógica de recomendación funcionando y mapeo de datos completado">
+      <option name="closed" value="true" />
+      <created>1777387009092</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777387009092</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

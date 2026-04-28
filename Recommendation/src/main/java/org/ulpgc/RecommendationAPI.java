@@ -23,7 +23,7 @@ public class RecommendationAPI {
             if (city == null || city.isEmpty()) {
                 ctx.status(400).result("Debes indicar una ciudad: ?city=Nombre");
             } else {
-                ctx.result(datamart.getSmartRecommendation(city));
+                 ctx.result(datamart.getSmartRecommendation(city));
             }
         });
 
