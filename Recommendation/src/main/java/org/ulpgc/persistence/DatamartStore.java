@@ -23,7 +23,7 @@ public class DatamartStore {
                 )
             """);
 
-            // Tabla para productos
+
             stmt.execute("""
                 CREATE TABLE IF NOT EXISTS product_catalog (
                     id TEXT PRIMARY KEY,
@@ -69,7 +69,7 @@ public class DatamartStore {
         }
     }
 
-    // Método para consultar el clima desde la API
+
     public String getWeatherFor(String city) {
         String sql = "SELECT * FROM weather_status WHERE city = ?";
         try (Connection conn = DriverManager.getConnection(dbPath);
@@ -86,7 +86,7 @@ public class DatamartStore {
         return "No hay datos para " + city;
     }
 
-    // Método de Recomendación Inteligente (Sprint 3)
+
     public String getSmartRecommendation(String city) {
         String sql = "SELECT temperature, description FROM weather_status WHERE city = ?";
         try (Connection conn = DriverManager.getConnection(dbPath);

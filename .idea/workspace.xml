@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones, correcciones">
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java" afterDir="false" />
+    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="lógica de recomendación funcionando y mapeo de datos completado">
+      <change afterPath="$PROJECT_DIR$/datamart_final.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eventstore/Product/zalando-feeder/20260428.events" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/DatamartStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/DatamartStore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777385999395</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="lógica de recomendación funcionando y mapeo de datos completado">
+      <option name="closed" value="true" />
+      <created>1777386710901</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777386710901</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,7 +144,8 @@
     <MESSAGE value="Código de EventSuscriber y EventReader" />
     <MESSAGE value="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones" />
     <MESSAGE value="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones, correcciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones, correcciones" />
+    <MESSAGE value="lógica de recomendación funcionando y mapeo de datos completado" />
+    <option name="LAST_COMMIT_MESSAGE" value="lógica de recomendación funcionando y mapeo de datos completado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
