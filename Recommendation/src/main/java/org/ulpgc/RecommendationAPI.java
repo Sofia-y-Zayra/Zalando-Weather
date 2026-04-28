@@ -13,7 +13,6 @@ public class RecommendationAPI {
     public void start() {
         Javalin app = Javalin.create().start(8080);
 
-
         app.get("/weather/{city}", ctx -> {
             ctx.result(datamart.getWeatherFor(ctx.pathParam("city")));
         });
