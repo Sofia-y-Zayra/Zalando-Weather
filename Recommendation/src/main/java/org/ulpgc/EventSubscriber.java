@@ -34,29 +34,57 @@ public class EventSubscriber {
             weatSub.setMessageListener(m -> process((Message) m, "Weather"));
 
             System.out.println("Suscriptor en tiempo real funcionando...");
-        } catch (Exception e) { e.printStackTrace(); }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void process(Message message, String topic) {
         try {
             if (message instanceof TextMessage tm) {
                 String json = tm.getText();
-                EventWriter.write(topic, json); // Persistencia Sprint 2
-                updateDatamart(json, topic);    // Explotación Sprint 3
+                EventWriter.write(topic, json);
+                updateDatamart(json, topic);
             }
-        } catch (Exception e) { e.printStackTrace(); }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void updateDatamart(String json, String topic) {
-        JsonObject obj = gson.fromJson(json, JsonObject.class);
-        String ts = obj.has("ts") ? obj.get("ts").getAsString() : "unknown";
+        try {
+            JsonObject obj = gson.fromJson(json, JsonObject.class);
+            String ts = obj.has("ts") ? obj.get("ts").getAsString() : "unknown";
 
-        if (topic.equals("Weather")) {
-            datamart.updateWeather(obj.get("city").getAsString(), obj.get("temp").getAsDouble(),
-                    obj.get("condition").getAsString(), ts);
-        } else {
-            datamart.upsertProduct(obj.get("id").getAsString(), obj.get("name").getAsString(),
-                    obj.get("price").getAsDouble(), obj.get("category").getAsString(), ts);
+            if (topic.equals("Weather")) {
+                // El feeder de Clima usa "data"
+                if (obj.has("data")) {
+                    JsonObject data = obj.getAsJsonObject("data");
+                    datamart.updateWeather(
+                            data.get("city").getAsString(),
+                            data.get("temperature").getAsDouble(),
+                            data.get("description").getAsString(),
+                            ts
+                    );
+                    System.out.println("[DATAMART] Clima actualizado: " + data.get("city").getAsString());
+                }
+
+            } else if (topic.equals("Product")) {
+                // Tu feeder de Zalando usa "product" (según tu clase EventZalando)
+                if (obj.has("product")) {
+                    JsonObject p = obj.getAsJsonObject("product");
+                    datamart.upsertProduct(
+                            p.get("id").getAsString(),
+                            p.get("name").getAsString(),
+                            p.get("price").getAsDouble(),
+                            p.get("category").getAsString(),
+                            ts
+                    );
+                    System.out.println("[DATAMART] Producto actualizado: " + p.get("name").getAsString());
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("Error procesando JSON de " + topic + ": " + e.getMessage());
         }
     }
 }

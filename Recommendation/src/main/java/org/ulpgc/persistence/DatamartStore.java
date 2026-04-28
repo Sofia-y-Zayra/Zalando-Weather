@@ -13,15 +13,17 @@ public class DatamartStore {
         try (Connection conn = DriverManager.getConnection(dbPath);
              Statement stmt = conn.createStatement()) {
 
+
             stmt.execute("""
                 CREATE TABLE IF NOT EXISTS weather_status (
                     city TEXT PRIMARY KEY,
-                    temp REAL,
-                    condition TEXT,
+                    temperature REAL,
+                    description TEXT,
                     timestamp TEXT
                 )
             """);
 
+            // Tabla para productos
             stmt.execute("""
                 CREATE TABLE IF NOT EXISTS product_catalog (
                     id TEXT PRIMARY KEY,
@@ -31,22 +33,25 @@ public class DatamartStore {
                     timestamp TEXT
                 )
             """);
+
             System.out.println("Datamart inicializado y listo.");
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public void updateWeather(String city, double temp, String condition, String ts) {
-        String sql = "INSERT OR REPLACE INTO weather_status(city, temp, condition, timestamp) VALUES(?,?,?,?)";
+    public void updateWeather(String city, double temperature, String description, String ts) {
+        String sql = "INSERT OR REPLACE INTO weather_status(city, temperature, description, timestamp) VALUES(?,?,?,?)";
         try (Connection conn = DriverManager.getConnection(dbPath);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, city);
-            pstmt.setDouble(2, temp);
-            pstmt.setString(3, condition);
+            pstmt.setDouble(2, temperature);
+            pstmt.setString(3, description);
             pstmt.setString(4, ts);
             pstmt.executeUpdate();
-        } catch (SQLException e) { e.printStackTrace(); }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void upsertProduct(String id, String name, double price, String category, String ts) {
@@ -59,10 +64,12 @@ public class DatamartStore {
             pstmt.setString(4, category);
             pstmt.setString(5, ts);
             pstmt.executeUpdate();
-        } catch (SQLException e) { e.printStackTrace(); }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
-    // NUEVO: Método para obtener el clima actual de una ciudad
+    // Método para consultar el clima desde la API
     public String getWeatherFor(String city) {
         String sql = "SELECT * FROM weather_status WHERE city = ?";
         try (Connection conn = DriverManager.getConnection(dbPath);
@@ -70,29 +77,35 @@ public class DatamartStore {
             pstmt.setString(1, city);
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
-                return String.format("Ciudad: %s | Temp: %.1f°C | Condición: %s",
-                        rs.getString("city"), rs.getDouble("temp"), rs.getString("condition"));
+                return String.format("Ciudad: %s | Temp: %.1f°C | Estado: %s",
+                        rs.getString("city"), rs.getDouble("temperature"), rs.getString("description"));
             }
-        } catch (SQLException e) { e.printStackTrace(); }
-        return "No hay datos recientes para " + city;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return "No hay datos para " + city;
     }
 
-    // NUEVO: Lógica de Recomendación (Valor añadido del Sprint 3)
+    // Método de Recomendación Inteligente (Sprint 3)
     public String getSmartRecommendation(String city) {
-        String sql = "SELECT temp, condition FROM weather_status WHERE city = ?";
+        String sql = "SELECT temperature, description FROM weather_status WHERE city = ?";
         try (Connection conn = DriverManager.getConnection(dbPath);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, city);
             ResultSet rs = pstmt.executeQuery();
+
             if (rs.next()) {
-                double temp = rs.getDouble("temp");
-                String cond = rs.getString("condition").toLowerCase();
-                if (cond.contains("rain")) return "Está lloviendo en " + city + ". Te recomendamos un Chubasquero de Zalando.";
-                if (temp < 15) return "Hace frío en " + city + " (" + temp + "°C). Sugerimos ver Abrigos en Zalando.";
-                if (temp > 25) return "Hace calor en " + city + " (" + temp + "°C). ¡Ponte una Camiseta ligera!";
-                return "Clima templado en " + city + ". Una Sudadera es buena opción.";
+                double temp = rs.getDouble("temperature");
+                String desc = rs.getString("description").toLowerCase();
+
+                if (desc.contains("lluvia")) return "Está lloviendo en " + city + ". Te recomendamos un Chubasquero de Zalando.";
+                if (temp < 15) return "Hace frío en " + city + " (" + temp + "°C). Busca un Abrigo en nuestro catálogo.";
+                if (temp >= 15 && temp < 25) return "Clima agradable en " + city + ". Una Sudadera o Chaqueta ligera va bien.";
+                return "Hace calor en " + city + " (" + temp + "°C). ¡Ponte una Camiseta de manga corta!";
             }
-        } catch (SQLException e) { e.printStackTrace(); }
-        return "Sin datos climáticos para recomendar ropa en " + city;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return "Sin datos climáticos suficientes para recomendar en " + city;
     }
 }

@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="Código de EventSuscriber y EventReader">
-      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/RecommendationAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/DatamartStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/EventStoreLoader.java" afterDir="false" />
+    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/j.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/DatamartStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/DatamartStore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +89,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777311082455</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones">
+      <option name="closed" value="true" />
+      <created>1777384823057</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1777384823057</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,17 +126,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Prueba" />
     <MESSAGE value="Código de EventSuscriber y EventReader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Código de EventSuscriber y EventReader" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones" />
   </component>
 </project>
