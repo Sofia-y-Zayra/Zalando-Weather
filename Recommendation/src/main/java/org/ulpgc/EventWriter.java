@@ -10,15 +10,14 @@ public class EventWriter {
         try {
             JsonObject obj = new Gson().fromJson(json, JsonObject.class);
 
-            // Sacamos el identificador de la fuente (ej: "weather-feeder-canarias" o el de Zalando)
+ 
             String ss = obj.get("ss").getAsString();
 
-            // Sacamos la fecha del campo 'ts' del evento para el nombre del archivo
-            // Si el ts es "2026-04-27T15:30:00Z", esto saca "20260427"
+
             String ts = obj.get("ts").getAsString();
             String date = ts.substring(0, 10).replace("-", "");
 
-            // Construimos la ruta: eventstore/{topic}/{ss}/
+
             String path = "eventstore/" + topic + "/" + ss;
 
             File folder = new File(path);
@@ -28,7 +27,7 @@ public class EventWriter {
 
             File file = new File(folder, date + ".events");
 
-            // Escribimos el JSON al final del archivo (append = true) y añadimos salto de línea
+
             try (FileWriter writer = new FileWriter(file, true)) {
                 writer.write(json + "\n");
             }

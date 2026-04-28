@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment=".">
+    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="Código de EventSuscriber y EventReader">
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/RecommendationAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/DatamartStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/EventStoreLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Recommendation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/j.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;zayrapenya&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Sofia-y-Zayra/Zalando-Weather.git&quot;,
+    &quot;accountId&quot;: &quot;4ac20e09-b083-40be-a7fc-8184a81e1f85&quot;
+  }
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -107,5 +125,16 @@
     <MESSAGE value="Prueba" />
     <MESSAGE value="Código de EventSuscriber y EventReader" />
     <option name="LAST_COMMIT_MESSAGE" value="Código de EventSuscriber y EventReader" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

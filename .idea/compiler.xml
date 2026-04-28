@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Weather_Project" />
         <module name="Recommendation" />
+        <module name="Zalando" />
       </profile>
     </annotationProcessing>
   </component>
