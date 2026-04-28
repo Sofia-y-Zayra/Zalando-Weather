@@ -1,4 +1,4 @@
-package org.ulpgc;
+package org.ulpgc.model;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;

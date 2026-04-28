@@ -1,0 +1,78 @@
+Index: Zalando/src/main/java/org/ulpgc/dacd/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Zalando/src/main/java/org/ulpgc/dacd/Main.java b/Zalando/src/main/java/org/ulpgc/dacd/visual/Main.java
+rename from Zalando/src/main/java/org/ulpgc/dacd/Main.java
+rename to Zalando/src/main/java/org/ulpgc/dacd/visual/Main.java
+--- a/Zalando/src/main/java/org/ulpgc/dacd/Main.java	(revision 0f4de443f3515821ac9ea94cd1015d18a63f6d99)
++++ b/Zalando/src/main/java/org/ulpgc/dacd/visual/Main.java	(date 1777313988598)
+@@ -1,4 +1,4 @@
+-package org.ulpgc.dacd;
++package org.ulpgc.dacd.visual;
+ 
+ import org.ulpgc.dacd.control.EventPublisher;
+ import org.ulpgc.dacd.model.EventZalando;
+Index: Recommendation/src/main/java/org/ulpgc/j.java
+===================================================================
+diff --git a/Recommendation/src/main/java/org/ulpgc/j.java b/Recommendation/src/main/java/org/ulpgc/j.java
+deleted file mode 100644
+--- a/Recommendation/src/main/java/org/ulpgc/j.java	(revision 0f4de443f3515821ac9ea94cd1015d18a63f6d99)
++++ /dev/null	(revision 0f4de443f3515821ac9ea94cd1015d18a63f6d99)
+@@ -1,4 +0,0 @@
+-package org.ulpgc;
+-
+-public class j {
+-}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"cae3921d-37ee-42d8-b5ce-f11a49890c73\" name=\"Changes\" comment=\".\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Recommendation/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Recommendation/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"3CwvdN4GOQ2onATErDxgIJANmDt\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.Main.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26199.169\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"cae3921d-37ee-42d8-b5ce-f11a49890c73\" name=\"Changes\" comment=\"\" />\r\n      <created>1777309532419</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1777309532419</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Prueba\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1777309635157</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1777309635157</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Código de EventSuscriber y EventReader\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1777311082455</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1777311082455</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"feature\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Prueba\" />\r\n    <MESSAGE value=\"Código de EventSuscriber y EventReader\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Código de EventSuscriber y EventReader\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0f4de443f3515821ac9ea94cd1015d18a63f6d99)
++++ b/.idea/workspace.xml	(date 1777313802534)
+@@ -4,10 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment=".">
++    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="arreglo">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Recommendation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/j.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/visual/Main.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -77,7 +77,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1777311082455</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="arreglo">
++      <option name="closed" value="true" />
++      <created>1777313218288</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1777313218288</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -106,6 +114,7 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Prueba" />
+     <MESSAGE value="Código de EventSuscriber y EventReader" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Código de EventSuscriber y EventReader" />
++    <MESSAGE value="arreglo" />
++    <option name="LAST_COMMIT_MESSAGE" value="arreglo" />
+   </component>
+ </project>
+\ No newline at end of file
