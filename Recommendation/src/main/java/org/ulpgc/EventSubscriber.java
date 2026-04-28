@@ -70,7 +70,6 @@ public class EventSubscriber {
                 }
 
             } else if (topic.equals("Product")) {
-                // Tu feeder de Zalando usa "product" (según tu clase EventZalando)
                 if (obj.has("product")) {
                     JsonObject p = obj.getAsJsonObject("product");
                     datamart.upsertProduct(

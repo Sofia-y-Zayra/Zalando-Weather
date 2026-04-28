@@ -3,7 +3,7 @@ package org.ulpgc.persistence;
 import java.sql.*;
 
 public class DatamartStore {
-    private final String dbPath = "jdbc:sqlite:datamart.db";
+    private final String dbPath = "jdbc:sqlite:datamart_final.db";
 
     public DatamartStore() {
         initDatabase();
