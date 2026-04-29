@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="lógica de recomendación funcionando y mapeo de datos completado" />
+    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones, correcciones">
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventSubscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/DatamartUpdater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/test/java/DatamartUpdaterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/test/java/EventStoreLoaderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/test/java/EventWriterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/RecommendationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/RecommendationAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/DatamartStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/DatamartStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/EventStoreLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/EventStoreLoader.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,17 +58,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "JUnit.DatamartUpdaterTest.executor": "Run",
+    "JUnit.EventStoreLoaderTest.executor": "Run",
+    "JUnit.EventWriterTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "feature",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -101,31 +122,7 @@
       <option name="project" value="LOCAL" />
       <updated>1777385999395</updated>
     </task>
-    <task id="LOCAL-00005" summary="lógica de recomendación funcionando y mapeo de datos completado">
-      <option name="closed" value="true" />
-      <created>1777386710901</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1777386710901</updated>
-    </task>
-    <task id="LOCAL-00006" summary="lógica de recomendación funcionando y mapeo de datos completado">
-      <option name="closed" value="true" />
-      <created>1777387009092</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1777387009092</updated>
-    </task>
-    <task id="LOCAL-00007" summary="lógica de recomendación funcionando y mapeo de datos completado">
-      <option name="closed" value="true" />
-      <created>1777387157149</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1777387157149</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,16 +153,20 @@
     <MESSAGE value="Código de EventSuscriber y EventReader" />
     <MESSAGE value="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones" />
     <MESSAGE value="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones, correcciones" />
-    <MESSAGE value="lógica de recomendación funcionando y mapeo de datos completado" />
-    <option name="LAST_COMMIT_MESSAGE" value="lógica de recomendación funcionando y mapeo de datos completado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones, correcciones" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java</url>
-          <line>8</line>
+          <url>file://$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventSubscriber.java</url>
+          <line>7</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Recommendation/src/test/java/EventWriterTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

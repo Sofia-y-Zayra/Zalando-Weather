@@ -1,6 +1,7 @@
 package org.ulpgc;
 
-import org.ulpgc.persistence.DatamartStore;
+import org.ulpgc.control.EventSubscriber;
+import org.ulpgc.model.DatamartStore;
 import org.ulpgc.persistence.EventStoreLoader;
 
 public class Main {

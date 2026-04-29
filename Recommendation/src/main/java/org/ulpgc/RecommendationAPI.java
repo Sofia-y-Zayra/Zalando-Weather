@@ -1,7 +1,7 @@
 package org.ulpgc;
 
 import io.javalin.Javalin;
-import org.ulpgc.persistence.DatamartStore;
+import org.ulpgc.model.DatamartStore;
 
 public class RecommendationAPI {
     private final DatamartStore datamart;
