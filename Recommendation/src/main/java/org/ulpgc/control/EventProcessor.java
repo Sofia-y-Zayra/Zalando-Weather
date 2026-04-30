@@ -1,33 +1,38 @@
 package org.ulpgc.control;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import org.ulpgc.model.DatamartUpdater;
-import org.ulpgc.model.EventWriter;
 import org.ulpgc.model.DatamartStore;
 
 import javax.jms.Message;
 import javax.jms.TextMessage;
 
-// EventProcessor.java
 public class EventProcessor {
 
     private final DatamartUpdater updater;
+    private final Gson gson = new Gson();
 
     public EventProcessor(DatamartStore datamart) {
         this.updater = new DatamartUpdater(datamart);
     }
 
     public void process(Message message, String topic) {
+
         try {
-            if (message instanceof TextMessage textMessage) {
+            if (message instanceof TextMessage tm) {
 
-                String json = textMessage.getText();
+                String json = tm.getText();
 
-                EventWriter.write(topic, json);
-                updater.update(json, topic);
+                JsonObject obj = gson.fromJson(json, JsonObject.class);
+
+                updater.update(obj, topic);
+
+                System.out.println("Evento procesado: " + topic);
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }
     }
 }
