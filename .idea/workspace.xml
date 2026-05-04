@@ -4,24 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="refactorizacion, test y finalizacion del sprint 2">
-      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/OutfitBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/RecommendationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/WeatherRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/utils/ColorMatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/utils/Outfit.java" afterDir="false" />
+    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="outfit recommendation finalizada faltan retoques de estetica">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/datamart_final.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/RecommendationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/RecommendationAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/DatamartStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/DatamartStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/DatamartUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/DatamartUpdater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/EventStoreLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/EventStoreLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datamart.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datamart_final.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/products.db" beforeDir="false" afterPath="$PROJECT_DIR$/products.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/OutfitBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/OutfitBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/utils/Outfit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datamart_final.db" beforeDir="false" afterPath="$PROJECT_DIR$/datamart_final.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eventstore/Product/zalando-feeder/20260429.events" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eventstore/Weather/weather-feeder-canarias/20260429.events" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777416321425</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="outfit recommendation finalizada faltan retoques de estetica">
+      <option name="closed" value="true" />
+      <created>1777539386869</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777539386869</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,7 +162,8 @@
     <MESSAGE value="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones" />
     <MESSAGE value="Comienzo del sprint 3, Implementación del flujo de datos en tiempo real y diseño del Datamart para recomendaciones, correcciones" />
     <MESSAGE value="refactorizacion, test y finalizacion del sprint 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactorizacion, test y finalizacion del sprint 2" />
+    <MESSAGE value="outfit recommendation finalizada faltan retoques de estetica" />
+    <option name="LAST_COMMIT_MESSAGE" value="outfit recommendation finalizada faltan retoques de estetica" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -6,6 +6,10 @@ import org.ulpgc.dacd.model.Product;
 import java.util.List;
 
 public class OutfitBuilder {
+    private Product randomPick(List<Product> list) {
+        if (list.isEmpty()) return null;
+        return list.get(java.util.concurrent.ThreadLocalRandom.current().nextInt(list.size()));
+    }
 
     public String build(String city, double temp, String desc, String gender, List<Product> products) {
 
@@ -13,50 +17,45 @@ public class OutfitBuilder {
                 .filter(p -> p.getCategory().toUpperCase().contains(gender.toUpperCase()))
                 .toList();
 
-        // =====================
-        // 1. PANTALÓN
-        // =====================
 
         List<Product> pantsList = filtered.stream()
                 .filter(p -> p.getCategory().contains("PANTALON"))
                 .toList();
 
-        Product pants = pantsList.stream().findFirst().orElse(null);
+        Product pants = randomPick(pantsList);
 
-        // =====================
-        // 2. CAMISETA (según ColorMatcher)
-        // =====================
 
         Product top = null;
 
         if (pants != null) {
 
+            List<String> weatherColors = ColorMatcher.colorsByWeather(desc);
             List<String> validColors = ColorMatcher.matchTops(pants.getColor());
-            top = filtered.stream()
+
+            List<Product> tops = filtered.stream()
                     .filter(p -> p.getCategory().contains("CAMISETA"))
                     .filter(p -> p.getColor() != null &&
-                            validColors.stream().anyMatch(c ->
-                                    p.getColor().toLowerCase().contains(c)))
-                    .findFirst()
-                    .orElse(null);
+                            weatherColors.stream().anyMatch(w ->
+                                    p.getColor().toLowerCase().contains(w)))
+                    .filter(p -> validColors.stream().anyMatch(c ->
+                            p.getColor().toLowerCase().contains(c)))
+                    .toList();
+
+            top = randomPick(tops);
         }
 
-        // =====================
-        // 3. CHAQUETA
-        // =====================
+
 
         Product jacket = null;
 
         if (temp < 20) {
-            jacket = filtered.stream()
+            List<Product> jackets = filtered.stream()
                     .filter(p -> p.getCategory().contains("CHAQUETA"))
-                    .findFirst()
-                    .orElse(null);
+                    .toList();
+
+            jacket = randomPick(jackets);
         }
 
-        // =====================
-        // OUTPUT
-        // =====================
 
         double total = 0;
         StringBuilder sb = new StringBuilder();
