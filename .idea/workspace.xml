@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="Finalización de la interfaz" />
+    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="Finalización de la interfaz">
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/RecommendationPageBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/ActiveMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventRestorer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/Outfit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/ProductEventMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/WeatherData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/WeatherEventMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/EventFileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/visual/OutfitHtmlRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/RecommendationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/RecommendationAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventSubscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/DatamartStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/DatamartStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/DatamartUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/DatamartUpdater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/EventWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/OutfitBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/OutfitBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/RecommendationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/RecommendationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/WeatherRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/WeatherRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/EventStoreLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/EventStoreLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/test/java/DatamartUpdaterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/test/java/DatamartUpdaterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/test/java/EventStoreLoaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/test/java/EventStoreLoaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/test/java/EventWriterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/test/java/EventWriterTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

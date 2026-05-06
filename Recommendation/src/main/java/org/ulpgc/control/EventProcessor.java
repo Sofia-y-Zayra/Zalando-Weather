@@ -3,7 +3,7 @@ package org.ulpgc.control;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import org.ulpgc.model.DatamartUpdater;
-import org.ulpgc.model.DatamartStore;
+import org.ulpgc.persistence.DatamartStore;
 
 import javax.jms.Message;
 import javax.jms.TextMessage;

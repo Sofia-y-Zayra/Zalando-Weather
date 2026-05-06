@@ -1,5 +1,5 @@
 import org.junit.Test;
-import org.ulpgc.model.DatamartStore;
+import org.ulpgc.persistence.DatamartStore;
 import org.ulpgc.persistence.EventStoreLoader;
 
 import java.io.File;
