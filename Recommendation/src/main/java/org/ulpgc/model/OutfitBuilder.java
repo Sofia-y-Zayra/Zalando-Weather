@@ -12,7 +12,6 @@ public class OutfitBuilder {
     }
 
     public String build(String city, double temp, String desc, String gender, List<Product> products) {
-
         List<Product> filtered = products.stream()
                 .filter(p -> p.getCategory().toUpperCase().contains(gender.toUpperCase()))
                 .toList();
@@ -23,81 +22,47 @@ public class OutfitBuilder {
                 .toList();
         Product pants = randomPick(pantsList);
 
-
         Product top = null;
         if (pants != null) {
-            List<String> weatherColors = ColorMatcher.colorsByWeather(desc);
             List<String> validColors = ColorMatcher.matchTops(pants.getColor());
-
             List<Product> tops = filtered.stream()
                     .filter(p -> p.getCategory().toUpperCase().contains("CAMISETA"))
-                    .filter(p -> p.getColor() != null &&
-                            weatherColors.stream().anyMatch(w -> p.getColor().toLowerCase().contains(w.toLowerCase())))
-                    .filter(p -> validColors.stream().anyMatch(c -> p.getColor().toLowerCase().contains(c.toLowerCase())))
+                    .filter(p -> p.getColor() != null && validColors.stream().anyMatch(c -> p.getColor().toLowerCase().contains(c.toLowerCase())))
                     .toList();
             top = randomPick(tops);
         }
 
-
-        Product jacket = null;
-        if (temp < 20) {
-            List<Product> jackets = filtered.stream()
-                    .filter(p -> p.getCategory().toUpperCase().contains("CHAQUETA") ||
-                            p.getCategory().toUpperCase().contains("ABRIGO"))
-                    .toList();
-            jacket = randomPick(jackets);
-        }
+        Product jacket = (temp < 20) ? randomPick(filtered.stream().filter(p -> p.getCategory().toUpperCase().contains("CHAQUETA")).toList()) : null;
 
 
         StringBuilder sb = new StringBuilder();
         double total = 0;
 
+        if (top != null) { sb.append(createProductCard("Prenda Superior", top)); total += top.getPrice(); }
+        if (pants != null) { sb.append(createProductCard("Pantalón", pants)); total += pants.getPrice(); }
+        if (jacket != null) { sb.append(createProductCard("Abrigo", jacket)); total += jacket.getPrice(); }
 
-        sb.append("<div class='outfit-grid'>");
+        if (total == 0) return "<p style='grid-column: 1/-1; text-align:center;'>No hay productos suficientes en el Datamart para esta combinación.</p>";
 
-        if (top != null) {
-            sb.append(createProductCard("Prenda Superior", top));
-            total += top.getPrice();
-        }
-
-        if (pants != null) {
-            sb.append(createProductCard("Pantalón", pants));
-            total += pants.getPrice();
-        }
-
-        if (jacket != null) {
-            sb.append(createProductCard("Complemento abrigo", jacket));
-            total += jacket.getPrice();
-        }
-
-        sb.append("</div>");
-
-
-        sb.append("<div style='margin-top: 30px; text-align: center; border-top: 2px solid #eee; padding-top: 20px;'>");
-        sb.append("<span style='font-size: 1.5em; font-weight: 600;'>Precio total del outfit: ");
-        sb.append("<span style='color: #e74c3c;'>").append(String.format("%.2f", total)).append(" €</span></span>");
-        sb.append("</div>");
+        sb.append("<div style='grid-column: 1/-1; text-align: center; margin-top: 20px; font-size: 1.4em;'>");
+        sb.append("Total Outfit: <b style='color:#e74c3c;'>").append(String.format("%.2f", total)).append(" €</b></div>");
 
         return sb.toString();
     }
 
-
     private String createProductCard(String label, Product p) {
-        return String.format("""
-            <div class='card'>
-                <div style='color: #888; font-size: 0.8em; margin-bottom: 5px; text-transform: uppercase;'>%s</div>
-                <img src='%s' alt='%s'>
-                <h3>%s</h3>
-                <div style='color: #555; font-size: 0.9em; margin-bottom: 10px;'>Marca: %s | Color: %s</div>
-                <div class='price'>%.2f €</div>
-            </div>
-            """,
-                label,
-                p.getImageUrl(),
-                p.getName(),
-                p.getName(),
-                (p.getBrand() != null ? p.getBrand() : "Zalando"),
-                (p.getColor() != null ? p.getColor() : "N/A"),
-                p.getPrice());
-    }
+            return String.format("""
+        <div class='card'>
+            <div style='color: #888; font-size: 0.75em; margin-bottom: 5px; text-transform: uppercase;'>%s</div>
+            <!-- El formato correcto para imagen como texto -->
+            <img src="data:image/jpeg;base64,%s" alt="prenda">
+            <h3>%s</h3>
+            <div class='price'>%.2f €</div>
+        </div>
+        """,
+                    label,
+                    p.getImageUrl(),
+                    p.getName(),
+                    p.getPrice());
+        }
 }
