@@ -2,10 +2,10 @@ package org.ulpgc.model;
 
 import org.ulpgc.model.utils.ColorMatcher;
 import org.ulpgc.dacd.model.Product;
-
 import java.util.List;
 
 public class OutfitBuilder {
+
     private Product randomPick(List<Product> list) {
         if (list.isEmpty()) return null;
         return list.get(java.util.concurrent.ThreadLocalRandom.current().nextInt(list.size()));
@@ -19,82 +19,85 @@ public class OutfitBuilder {
 
 
         List<Product> pantsList = filtered.stream()
-                .filter(p -> p.getCategory().contains("PANTALON"))
+                .filter(p -> p.getCategory().toUpperCase().contains("PANTALON"))
                 .toList();
-
         Product pants = randomPick(pantsList);
 
 
         Product top = null;
-
         if (pants != null) {
-
             List<String> weatherColors = ColorMatcher.colorsByWeather(desc);
             List<String> validColors = ColorMatcher.matchTops(pants.getColor());
 
             List<Product> tops = filtered.stream()
-                    .filter(p -> p.getCategory().contains("CAMISETA"))
+                    .filter(p -> p.getCategory().toUpperCase().contains("CAMISETA"))
                     .filter(p -> p.getColor() != null &&
-                            weatherColors.stream().anyMatch(w ->
-                                    p.getColor().toLowerCase().contains(w)))
-                    .filter(p -> validColors.stream().anyMatch(c ->
-                            p.getColor().toLowerCase().contains(c)))
+                            weatherColors.stream().anyMatch(w -> p.getColor().toLowerCase().contains(w.toLowerCase())))
+                    .filter(p -> validColors.stream().anyMatch(c -> p.getColor().toLowerCase().contains(c.toLowerCase())))
                     .toList();
-
             top = randomPick(tops);
         }
 
 
-
         Product jacket = null;
-
         if (temp < 20) {
             List<Product> jackets = filtered.stream()
-                    .filter(p -> p.getCategory().contains("CHAQUETA"))
+                    .filter(p -> p.getCategory().toUpperCase().contains("CHAQUETA") ||
+                            p.getCategory().toUpperCase().contains("ABRIGO"))
                     .toList();
-
             jacket = randomPick(jackets);
         }
 
 
-        double total = 0;
         StringBuilder sb = new StringBuilder();
+        double total = 0;
 
-        sb.append("Clima en ").append(city).append("\n");
-        sb.append("Temperatura: ").append(temp).append(" grados\n");
-        sb.append("Descripcion: ").append(desc).append("\n\n");
 
-        sb.append("Outfit recomendado (").append(gender).append(")\n\n");
+        sb.append("<div class='outfit-grid'>");
 
         if (top != null) {
-            sb.append("Camiseta: ").append(top.getName()).append("\n");
-            sb.append("Precio: ").append(top.getPrice()).append("\n\n");
-            sb.append("<img src='data:image/jpeg;base64,")
-                    .append(top.getImageUrl())
-                    .append("' width='200'/><br><br>");
+            sb.append(createProductCard("Prenda Superior", top));
             total += top.getPrice();
         }
 
         if (pants != null) {
-            sb.append("Pantalón: ").append(pants.getName()).append("\n");
-            sb.append("Precio: ").append(pants.getPrice()).append("\n\n");
-            sb.append("<img src='data:image/jpeg;base64,")
-                    .append(pants.getImageUrl())
-                    .append("' width='200'/><br><br>");
+            sb.append(createProductCard("Pantalón", pants));
             total += pants.getPrice();
         }
 
         if (jacket != null) {
-            sb.append("Chaqueta: ").append(jacket.getName()).append("\n");
-            sb.append("Precio: ").append(jacket.getPrice()).append("\n\n");
-            sb.append("<img src='data:image/jpeg;base64,")
-                    .append(jacket.getImageUrl())
-                    .append("' width='200'/><br><br>");
+            sb.append(createProductCard("Complemento abrigo", jacket));
             total += jacket.getPrice();
         }
 
-        sb.append("Total outfit: ").append(String.format("%.2f", total)).append("euros");
+        sb.append("</div>");
+
+
+        sb.append("<div style='margin-top: 30px; text-align: center; border-top: 2px solid #eee; padding-top: 20px;'>");
+        sb.append("<span style='font-size: 1.5em; font-weight: 600;'>Precio total del outfit: ");
+        sb.append("<span style='color: #e74c3c;'>").append(String.format("%.2f", total)).append(" €</span></span>");
+        sb.append("</div>");
 
         return sb.toString();
+    }
+
+
+    private String createProductCard(String label, Product p) {
+        return String.format("""
+            <div class='card'>
+                <div style='color: #888; font-size: 0.8em; margin-bottom: 5px; text-transform: uppercase;'>%s</div>
+                <img src='%s' alt='%s'>
+                <h3>%s</h3>
+                <div style='color: #555; font-size: 0.9em; margin-bottom: 10px;'>Marca: %s | Color: %s</div>
+                <div class='price'>%.2f €</div>
+            </div>
+            """,
+                label,
+                p.getImageUrl(),
+                p.getName(),
+                p.getName(),
+                (p.getBrand() != null ? p.getBrand() : "Zalando"),
+                (p.getColor() != null ? p.getColor() : "N/A"),
+                p.getPrice());
     }
 }
