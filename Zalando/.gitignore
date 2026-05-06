@@ -38,3 +38,5 @@ build/
 ### Mac OS ###
 .DS_Store
 
+datamart_final.db
+*.db
