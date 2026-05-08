@@ -20,7 +20,7 @@ El proyecto sigue una estructura basada en *microservicios/módulos* para garant
    Api rest construida con Javalin.
    Interfaz web dinámica que consume el DataMart y muestra las recomendaciones.
 
-## 3. Tecnologías y Patrones
+## Tecnologías y Patrones
 
 - **Lenguaje:** Java 17+
 - **Framework Web:** Javalin (Ligero y eficiente para APIs REST).
