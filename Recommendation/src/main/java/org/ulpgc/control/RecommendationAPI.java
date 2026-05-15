@@ -1,20 +1,25 @@
 package org.ulpgc.control;
 
 import io.javalin.Javalin;
+import org.ulpgc.model.Outfit;
+import org.ulpgc.model.RecommendationService;
 import org.ulpgc.view.RecommendationPageBuilder;
-import org.ulpgc.persistence.DatamartStore;
-import org.ulpgc.persistence.WeatherRepository;
-
+import org.ulpgc.model.persistence.DatamartStore;
+import org.ulpgc.model.persistence.WeatherRepository;
 
 public class RecommendationAPI {
 
     private static final int PORT = 8080;
 
     private final RecommendationService recommendationService;
+
     private final WeatherRepository weatherRepo;
+
     private final RecommendationPageBuilder pageBuilder;
 
-    public RecommendationAPI(DatamartStore datamart) {
+    public RecommendationAPI(
+            DatamartStore datamart
+    ) {
 
         this.recommendationService =
                 new RecommendationService(datamart);
@@ -28,39 +33,52 @@ public class RecommendationAPI {
 
     public void start() {
 
-        Javalin app = Javalin.create().start(PORT);
+        Javalin app =
+                Javalin.create().start(PORT);
 
         app.get("/", ctx -> ctx.redirect("/recommend"));
 
         app.get("/recommend", ctx -> {
 
-            String city = ctx.queryParam("city");
-            String gender = ctx.queryParam("gender");
+            String city =
+                    ctx.queryParam("city");
+
+            String gender =
+                    ctx.queryParam("gender");
 
             if (gender == null) {
                 gender = "MUJER";
             }
 
             double temp = 0;
+
             String desc = "";
-            String outfitHtml = "";
+
+            Outfit outfit = null;
 
             if (city != null) {
 
-                temp = weatherRepo.getTemperature(city);
-                desc = weatherRepo.getDescription(city);
+                temp =
+                        weatherRepo.getTemperature(city);
 
-                outfitHtml =
-                        recommendationService.recommend(city, gender);  //poner aqui q se pase el outfit y ya aqui se convierte a html
+                desc =
+                        weatherRepo.getDescription(city);
+
+                outfit =
+                        recommendationService.recommend(
+                                city,
+                                gender
+                        );
             }
 
-            String html = pageBuilder.buildPage(
-                    city,
-                    gender,
-                    temp,
-                    desc,
-                    outfitHtml
-            );
+            String html =
+                    pageBuilder.buildPage(
+                            city,
+                            gender,
+                            temp,
+                            desc,
+                            outfit
+                    );
 
             ctx.html(html);
         });

@@ -1,10 +1,6 @@
-package org.ulpgc.control;
+package org.ulpgc.model;
 
-import org.ulpgc.model.ColorType;
-import org.ulpgc.model.Outfit;
-import org.ulpgc.model.Product;
 import org.ulpgc.utils.WeatherParser;
-import org.ulpgc.model.WeatherType;
 
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;

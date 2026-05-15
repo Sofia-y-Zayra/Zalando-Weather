@@ -1,7 +1,4 @@
-package org.ulpgc.control;
-
-import org.ulpgc.model.ColorType;
-import org.ulpgc.model.WeatherType;
+package org.ulpgc.model;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package org.ulpgc.persistence;
+package org.ulpgc.model.persistence;
 
 import org.ulpgc.model.ColorType;
 import org.ulpgc.model.Product;

@@ -1,4 +1,4 @@
-package org.ulpgc.config;
+package org.ulpgc.model;
 
 public class ActiveMQConfig {
 

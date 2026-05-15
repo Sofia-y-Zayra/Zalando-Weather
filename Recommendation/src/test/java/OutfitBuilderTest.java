@@ -2,7 +2,7 @@ import org.junit.Test;
 import org.ulpgc.model.ColorType;
 import org.ulpgc.model.Outfit;
 import org.ulpgc.model.Product;
-import org.ulpgc.control.OutfitBuilder;
+import org.ulpgc.model.OutfitBuilder;
 
 import java.util.List;
 
