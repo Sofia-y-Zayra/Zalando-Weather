@@ -1,9 +1,8 @@
 package org.ulpgc.control;
 
 import io.javalin.Javalin;
-import org.ulpgc.visual.RecommendationPageBuilder;
+import org.ulpgc.view.RecommendationPageBuilder;
 import org.ulpgc.persistence.DatamartStore;
-import org.ulpgc.service.RecommendationService;
 import org.ulpgc.persistence.WeatherRepository;
 
 
@@ -52,7 +51,7 @@ public class RecommendationAPI {
                 desc = weatherRepo.getDescription(city);
 
                 outfitHtml =
-                        recommendationService.recommend(city, gender);
+                        recommendationService.recommend(city, gender);  //poner aqui q se pase el outfit y ya aqui se convierte a html
             }
 
             String html = pageBuilder.buildPage(

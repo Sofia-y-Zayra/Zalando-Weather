@@ -1,15 +1,10 @@
-package org.ulpgc.dacd.control;
+package control;
 
-
-import javax.jms.Connection;
-import javax.jms.ConnectionFactory;
-import javax.jms.MessageProducer;
-import javax.jms.Session;
-import javax.jms.TextMessage;
-import javax.jms.Topic;
 
 import com.google.gson.Gson;
 import org.apache.activemq.ActiveMQConnectionFactory;
+
+import javax.jms.*;
 
 public class EventPublisher {
 
@@ -66,3 +61,4 @@ public class EventPublisher {
         }
     }
 }
+

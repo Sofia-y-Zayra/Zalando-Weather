@@ -1,4 +1,4 @@
-package org.ulpgc.utils;
+package org.ulpgc.control;
 
 import org.ulpgc.model.ColorType;
 import org.ulpgc.model.WeatherType;
@@ -25,8 +25,7 @@ public class ColorMatcher {
                     ColorType.ROJO,
                     ColorType.NEGRO,
                     ColorType.MARRON,
-                    ColorType.MORADO,
-                    ColorType.BEIGE
+                    ColorType.MORADO
             );
 
             case LLUVIOSO -> List.of(
@@ -39,7 +38,6 @@ public class ColorMatcher {
 
             case DESCONOCIDO -> List.of(
                     ColorType.BLANCO,
-                    ColorType.BEIGE,
                     ColorType.GRIS
             );
         };

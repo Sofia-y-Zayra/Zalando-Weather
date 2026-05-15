@@ -5,11 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="Codigo refactorizado faltan los tests">
-      <change afterPath="$PROJECT_DIR$/Recommendation/src/test/java/ColorMatcherTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recommendation/src/test/java/ColorParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recommendation/src/test/java/OutfitBuilderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recommendation/src/test/java/WeatherParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EventStoreBuilder/src/main/java/org/ulpgc/control/EventConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EventStoreBuilder/src/main/java/org/ulpgc/control/EventFileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EventStoreBuilder/src/main/java/org/ulpgc/control/EventStorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventFileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Weather_Project/src/main/java/control/EventPublisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/model/ZalandoEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2026_22_26_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2026_22_26__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_5_26,_16_36_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_5_26__16_36__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventProcessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventSubscriber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/RecommendationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/RecommendationAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventLine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/ProductEventMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/WeatherEventMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/EventFileReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/EventStoreLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/persistence/EventWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/service/DatamartUpdater.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/service/EventRestorer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/service/OutfitBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/OutfitBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/service/RecommendationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/RecommendationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/utils/ColorMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/ColorMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/utils/ColorParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/utils/ColorParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/visual/OutfitHtmlRenderer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/visual/RecommendationPageBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/test/java/ColorMatcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/test/java/ColorMatcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/test/java/EventStoreLoaderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/test/java/OutfitBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/test/java/OutfitBuilderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather_Project/src/main/java/control/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather_Project/src/main/java/control/WeatherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather_Project/src/main/java/model/WeatherEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather_Project/src/main/java/model/WeatherEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather_Project/src/main/java/persistence/JmsPublisher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather_Project/src/main/java/visual/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zalando/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Zalando/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/control/EventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/control/EventPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/model/EventZalando.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/model/scraper/ZalandoScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/model/scraper/ZalandoScraper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +66,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -39,6 +80,13 @@
     &quot;accountId&quot;: &quot;39f1f186-33fd-4496-bc88-9714c6b39279&quot;
   }
 }</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="workOffline" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -66,11 +114,18 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "clean-feature",
     "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/sofia/IdeaProject/Zalando-Weather/EventStoreBuilder/src/main/java/org/ulpgc/Main.java",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sofia\IdeaProject\Zalando-Weather\Recommendation\src\main\java" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -264,7 +319,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventSubscriber.java</url>
+          <url>file://$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/EventSubscriber.java</url>
           <line>8</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -282,6 +337,11 @@
           <url>file://$PROJECT_DIR$/Recommendation/src/test/java/ColorMatcherTest.java</url>
           <line>63</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/EventStoreBuilder/src/main/java/org/ulpgc/control/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

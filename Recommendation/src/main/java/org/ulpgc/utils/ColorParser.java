@@ -30,9 +30,6 @@ public class ColorParser {
         if (value.contains("marron"))
             return ColorType.MARRON;
 
-        if (value.contains("beige"))
-            return ColorType.BEIGE;
-
         if (value.contains("rosa"))
             return ColorType.ROSA;
 

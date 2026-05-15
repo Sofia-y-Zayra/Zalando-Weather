@@ -1,4 +1,4 @@
-package org.ulpgc.service;
+package org.ulpgc.control;
 
 
 import org.ulpgc.model.Outfit;
@@ -6,7 +6,7 @@ import org.ulpgc.model.Product;
 import org.ulpgc.persistence.DatamartStore;
 import org.ulpgc.persistence.ProductRepository;
 import org.ulpgc.persistence.WeatherRepository;
-import org.ulpgc.visual.OutfitHtmlRenderer;
+import org.ulpgc.view.OutfitHtmlRenderer;
 
 import java.util.List;
 

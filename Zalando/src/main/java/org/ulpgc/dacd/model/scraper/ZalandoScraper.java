@@ -1,18 +1,25 @@
 package org.ulpgc.dacd.model.scraper;
 
+import org.ulpgc.dacd.control.EventPublisher;
 import org.ulpgc.dacd.control.ProductParser;
 import org.ulpgc.dacd.model.Product;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.support.ui.*;
+import org.ulpgc.dacd.model.ZalandoEvent;
 
 import java.time.Duration;
+import java.time.Instant;
 import java.util.*;
 
 public class ZalandoScraper {
 
     private final ProductParser searcher = new ProductParser();
+
+    private final EventPublisher publisher =
+            new EventPublisher();
+
     public List<Product> scrape() {
 
         List<Product> products = new ArrayList<>();
@@ -63,6 +70,19 @@ public class ZalandoScraper {
 
                     if (product != null) {
                         products.add(product);
+                        ZalandoEvent event =
+                                new ZalandoEvent(
+                                        UUID.randomUUID().toString(),
+                                        Instant.now().toString(),
+                                        "zalando",
+                                        "NEW_PRODUCT",
+                                        product
+                                );
+
+                        publisher.publish(
+                                "fashion-topic",
+                                event
+                        );
                     }
                 }
             }

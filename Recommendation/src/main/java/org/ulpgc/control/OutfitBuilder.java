@@ -1,9 +1,8 @@
-package org.ulpgc.service;
+package org.ulpgc.control;
 
 import org.ulpgc.model.ColorType;
 import org.ulpgc.model.Outfit;
 import org.ulpgc.model.Product;
-import org.ulpgc.utils.ColorMatcher;
 import org.ulpgc.utils.WeatherParser;
 import org.ulpgc.model.WeatherType;
 

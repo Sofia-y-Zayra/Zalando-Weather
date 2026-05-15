@@ -1,7 +1,7 @@
 import org.junit.Test;
 import org.ulpgc.model.ColorType;
 import org.ulpgc.model.WeatherType;
-import org.ulpgc.utils.ColorMatcher;
+import org.ulpgc.control.ColorMatcher;
 
 import java.util.List;
 

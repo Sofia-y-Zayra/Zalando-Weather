@@ -1,28 +1,30 @@
 package org.ulpgc;
 
-import org.ulpgc.control.EventSubscriber;
+import org.ulpgc.EventSubscriber;
 import org.ulpgc.control.RecommendationAPI;
 import org.ulpgc.persistence.DatamartStore;
-import org.ulpgc.persistence.EventStoreLoader;
+import org.ulpgc.EventStoreLoader;
 
 public class Main {
+
     public static void main(String[] args) {
-        System.out.println("=== INICIANDO BUSINESS UNIT (SPRINT 3) ===");
 
+        DatamartStore datamart =
+                new DatamartStore();
 
-        DatamartStore datamart = new DatamartStore();
+        EventStoreLoader loader =
+                new EventStoreLoader(datamart);
 
-
-        EventStoreLoader loader = new EventStoreLoader(datamart);
         loader.loadAll();
 
+        EventSubscriber subscriber =
+                new EventSubscriber(datamart);
 
-        EventSubscriber subscriber = new EventSubscriber(datamart);
         subscriber.start();
 
+        RecommendationAPI api =
+                new RecommendationAPI(datamart);
 
-        new RecommendationAPI(datamart).start();
-
-        System.out.println("Sistema listo para recibir consultas.");
+        api.start();
     }
 }

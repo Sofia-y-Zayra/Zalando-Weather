@@ -1,20 +1,19 @@
-package model;
+package org.ulpgc.dacd.model;
 
-
-public class WeatherEvent {
+public class ZalandoEvent {
 
     private String eventId;
     private String ts;
     private String ss;
     private String eventType;
-    private Weather payload;
+    private Product payload;
 
-    public WeatherEvent(
+    public ZalandoEvent(
             String eventId,
             String ts,
             String ss,
             String eventType,
-            Weather payload
+            Product payload
     ) {
         this.eventId = eventId;
         this.ts = ts;
@@ -39,7 +38,7 @@ public class WeatherEvent {
         return eventType;
     }
 
-    public Weather getPayload() {
+    public Product getPayload() {
         return payload;
     }
 }

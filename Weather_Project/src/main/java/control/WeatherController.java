@@ -5,48 +5,83 @@ import model.WeatherEvent;
 import model.WeatherTransformer;
 import model.WheatherApiConsumer;
 import org.json.JSONObject;
-import persistence.JmsPublisher; // Cambio: ahora usamos el Publisher
 
 import java.time.Instant;
 import java.util.List;
 
+import java.util.UUID;
+
 public class WeatherController {
 
     private WheatherApiConsumer consumer;
-    private WeatherTransformer transformer;
-    private JmsPublisher publisher; // Sustituye a DBHandler
 
-    public WeatherController(WheatherApiConsumer consumer, JmsPublisher publisher) {
+    private WeatherTransformer transformer;
+
+    private EventPublisher publisher;
+
+    public WeatherController(
+            WheatherApiConsumer consumer,
+            EventPublisher publisher
+    ) {
+
         this.consumer = consumer;
-        this.transformer = new WeatherTransformer();
+
+        this.transformer =
+                new WeatherTransformer();
+
         this.publisher = publisher;
     }
 
     public void run(List<String> cities) {
+
         for (String city : cities) {
+
             try {
-                JSONObject raw = consumer.fetchForecast(city);
-                JSONObject normalized = consumer.normalizeForecast(raw);
+
+                JSONObject raw =
+                        consumer.fetchForecast(city);
+
+                JSONObject normalized =
+                        consumer.normalizeForecast(raw);
 
                 if (normalized != null) {
-                    Weather weather = transformer.transform(normalized);
+
+                    Weather weather =
+                            transformer.transform(
+                                    normalized
+                            );
 
 
-                    WeatherEvent event = new WeatherEvent(
-                            Instant.now().toString(),
-                            "weather-feeder-canarias",
-                            weather
+                    WeatherEvent event =
+                            new WeatherEvent(
+                                    UUID.randomUUID().toString(),
+                                    Instant.now().toString(),
+                                    "weather-feeder-canarias",
+                                    "WEATHER_FORECAST",
+                                    weather
+                            );
+
+
+                    publisher.publish(
+                            "Weather",
+                            event
                     );
 
-
-                    publisher.publish("Weather", event.toJson());
-
                 } else {
-                    System.out.println("Sin datos: " + city);
+
+                    System.out.println(
+                            "Sin datos: " + city
+                    );
                 }
 
             } catch (Exception e) {
-                System.out.println("Error con ciudad: " + city + " -> " + e.getMessage());
+
+                System.out.println(
+                        "Error con ciudad: "
+                                + city
+                                + " -> "
+                                + e.getMessage()
+                );
             }
         }
     }
