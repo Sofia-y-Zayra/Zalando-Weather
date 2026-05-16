@@ -54,7 +54,8 @@ public class EventPublisher {
             producer.send(message);
 
             System.out.println(
-                    "Evento enviado: " + json
+                    "[EVENT SENT] Topic: "
+                            + topicName
             );
 
             producer.close();

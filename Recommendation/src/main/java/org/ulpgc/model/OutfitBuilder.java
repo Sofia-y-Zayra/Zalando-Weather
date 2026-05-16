@@ -3,7 +3,11 @@ package org.ulpgc.model;
 import org.ulpgc.utils.WeatherParser;
 
 import java.util.List;
+
 import java.util.concurrent.ThreadLocalRandom;
+
+import java.util.Collections;
+
 
 public class OutfitBuilder {
 
@@ -26,37 +30,83 @@ public class OutfitBuilder {
             List<Product> products
     ) {
 
-        List<Product> filtered = products.stream()
 
-                .filter(p ->
-                        p.getCategory()
-                                .toUpperCase()
-                                .contains(gender.toUpperCase())
-                )
+        List<Product> filtered =
+                products.stream()
 
-                .toList();
+                        .filter(p ->
+                                p.getCategory()
+                                        .toUpperCase()
+                                        .contains(
+                                                gender.toUpperCase()
+                                        )
+                        )
+
+                        .toList();
 
         WeatherType weather =
                 WeatherParser.parse(desc);
 
-        List<ColorType> weatherColorTypes =
-                ColorMatcher.colorsByWeather(weather);
 
 
-        List<Product> weatherFiltered = filtered.stream()
+        List<Product> climateFiltered;
 
-                .filter(p ->
-                        p.getColor() != null &&
-                                weatherColorTypes.contains(
-                                        p.getColor()
-                                )
-                )
+        if (weather == WeatherType.DESCONOCIDO) {
 
-                .toList();
+            climateFiltered = filtered;
+
+        } else {
+
+            List<ColorType> weatherColors =
+                    ColorMatcher.colorsByWeather(
+                            weather
+                    );
+
+            climateFiltered =
+                    filtered.stream()
+
+                            .filter(p ->
+                                    p.getColor() != null &&
+                                            weatherColors.contains(
+                                                    p.getColor()
+                                            )
+                            )
+
+                            .toList();
+        }
+
+
+        List<Product> tops =
+                climateFiltered.stream()
+
+                        .filter(p ->
+                                p.getCategory()
+                                        .toUpperCase()
+                                        .contains("CAMISETA")
+                        )
+
+                        .toList();
+
+        if (tops.isEmpty()) {
+
+            tops = filtered.stream()
+
+                    .filter(p ->
+                            p.getCategory()
+                                    .toUpperCase()
+                                    .contains("CAMISETA")
+                    )
+
+                    .toList();
+        }
+
+        Product top =
+                randomPick(tops);
+
 
 
         List<Product> pantsList =
-                weatherFiltered.stream()
+                filtered.stream()
 
                         .filter(p ->
                                 p.getCategory()
@@ -66,55 +116,52 @@ public class OutfitBuilder {
 
                         .toList();
 
-        Product pants =
-                randomPick(pantsList);
+        Product pants;
 
-        Product top = null;
+        if (top != null) {
 
-        if (pants != null) {
-
-            List<ColorType> validTopColorTypes =
-                    ColorMatcher.matchTops(
-                            pants.getColor()
+            List<ColorType> validPantColors =
+                    ColorMatcher.matchBottoms(
+                            top.getColor()
                     );
 
-            List<Product> tops =
-                    weatherFiltered.stream()
-                            .filter(p ->
-                                    p.getCategory()
-                                            .toUpperCase()
-                                            .contains("CAMISETA")
-                            )
+            List<Product> compatiblePants =
+                    pantsList.stream()
 
                             .filter(p ->
-                                    validTopColorTypes.contains(
+                                    validPantColors.contains(
                                             p.getColor()
                                     )
                             )
 
                             .toList();
-            if (tops.isEmpty()) {
 
-                tops = weatherFiltered.stream()
+            if (!compatiblePants.isEmpty()) {
 
-                        .filter(p ->
-                                p.getCategory()
-                                        .toUpperCase()
-                                        .contains("CAMISETA")
-                        )
+                pants =
+                        randomPick(
+                                compatiblePants
+                        );
 
-                        .toList();
+            } else {
+
+                pants =
+                        randomPick(pantsList);
             }
 
-            top = randomPick(tops);
+        } else {
+
+            pants =
+                    randomPick(pantsList);
         }
+
 
         Product jacket = null;
 
         if (temp < 20) {
 
             List<Product> jackets =
-                    weatherFiltered.stream()
+                    climateFiltered.stream()
 
                             .filter(p ->
                                     p.getCategory()
@@ -124,9 +171,9 @@ public class OutfitBuilder {
 
                             .toList();
 
-            jacket = randomPick(jackets);
+            jacket =
+                    randomPick(jackets);
         }
-
 
         return new Outfit(
                 top,

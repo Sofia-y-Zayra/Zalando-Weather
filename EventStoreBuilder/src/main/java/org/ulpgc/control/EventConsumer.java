@@ -57,7 +57,9 @@ public class EventConsumer {
                             "\nEVENTO RECIBIDO:"
                     );
 
-                    System.out.println(json);
+                    System.out.println(
+                            "[EVENT RECEIVED] " + topicName
+                    );
 
                     storageService.save(
                             topicName,

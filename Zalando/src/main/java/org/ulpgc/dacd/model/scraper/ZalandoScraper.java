@@ -45,7 +45,10 @@ public class ZalandoScraper {
 
             for (String url : urls) {
 
-                System.out.println("Entrando en: " + url);
+                System.out.println("\n========================");
+                System.out.println("SCRAPING:");
+                System.out.println(url);
+                System.out.println("========================");
 
                 driver.get(url);
 
@@ -80,7 +83,7 @@ public class ZalandoScraper {
                                 );
 
                         publisher.publish(
-                                "fashion-topic",
+                                "Product",
                                 event
                         );
                     }

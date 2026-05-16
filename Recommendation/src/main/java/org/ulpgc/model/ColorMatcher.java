@@ -1,8 +1,10 @@
 package org.ulpgc.model;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class ColorMatcher {
+
     public static List<ColorType> colorsByWeather(
             WeatherType weather
     ) {
@@ -22,7 +24,8 @@ public class ColorMatcher {
                     ColorType.ROJO,
                     ColorType.NEGRO,
                     ColorType.MARRON,
-                    ColorType.MORADO
+                    ColorType.MORADO,
+                    ColorType.AZUL
             );
 
             case LLUVIOSO -> List.of(
@@ -33,36 +36,40 @@ public class ColorMatcher {
                     ColorType.ROJO
             );
 
-            case DESCONOCIDO -> List.of(
-                    ColorType.BLANCO,
-                    ColorType.GRIS
+
+            case DESCONOCIDO -> Arrays.asList(
+                    ColorType.values()
             );
         };
     }
 
-    public static List<ColorType> matchTops(ColorType pantColorType) {
 
-        if (pantColorType == null) {
-            return List.of(ColorType.NEGRO);
+    public static List<ColorType> matchBottoms(
+            ColorType topColor
+    ) {
+
+        if (topColor == null) {
+
+            return Arrays.asList(
+                    ColorType.values()
+            );
         }
 
-        return switch (pantColorType) {
+        return switch (topColor) {
 
             case AZUL -> List.of(
                     ColorType.NEGRO,
-                    ColorType.MARRON,
-                    ColorType.ROJO,
-                    ColorType.GRIS
+                    ColorType.GRIS,
+                    ColorType.BLANCO,
+                    ColorType.MARRON
             );
 
             case NEGRO -> List.of(
-                    ColorType.GRIS,
-                    ColorType.BLANCO,
-                    ColorType.AMARILLO,
-                    ColorType.VERDE,
-                    ColorType.ROJO,
-                    ColorType.MORADO,
-                    ColorType.ROSA
+                    ColorType.values()
+            );
+
+            case BLANCO -> List.of(
+                    ColorType.values()
             );
 
             case ROJO -> List.of(
@@ -71,16 +78,9 @@ public class ColorMatcher {
                     ColorType.BLANCO
             );
 
-            case BLANCO -> List.of(
-                    ColorType.NEGRO,
-                    ColorType.AZUL,
-                    ColorType.VERDE,
-                    ColorType.ROJO,
-                    ColorType.MORADO,
-                    ColorType.ROSA
+            default -> Arrays.asList(
+                    ColorType.values()
             );
-
-            default -> List.of(ColorType.NEGRO);
         };
     }
 }
