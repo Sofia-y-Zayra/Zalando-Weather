@@ -37,6 +37,7 @@ public class DatamartStore {
                     brand TEXT,
                     color TEXT,
                     imageUrl TEXT,
+                    productUrl TEXT,
                     timestamp TEXT
                 )
             """);

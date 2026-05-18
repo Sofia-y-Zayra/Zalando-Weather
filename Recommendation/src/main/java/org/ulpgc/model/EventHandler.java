@@ -93,6 +93,12 @@ public class EventHandler {
                         : ""
         );
 
+        product.setProductUrl(
+                p.has("productUrl")
+                        ? p.get("productUrl").getAsString()
+                        : ""
+        );
+
         if (p.has("color")) {
 
             product.setColor(

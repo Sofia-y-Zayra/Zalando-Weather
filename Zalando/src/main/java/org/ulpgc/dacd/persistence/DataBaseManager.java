@@ -18,6 +18,7 @@ public class DataBaseManager {
                 "brand TEXT," +
                 "color TEXT," +
                 "imageUrl TEXT," +
+                "productUrl TEXT" +
                 "date TEXT" +
                 ")";
 
@@ -33,7 +34,7 @@ public class DataBaseManager {
 
     public static void insertProduct(Product p) {
 
-        String sql = "INSERT INTO products(name, price, category, brand, color, imageUrl, date) VALUES(?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO products(name, price, category, brand, color, imageUrl, productUrl, date) VALUES(?,?,?,?,?,?,?, ?)";
 
         try (Connection conn = DriverManager.getConnection(URL);
              PreparedStatement statement = conn.prepareStatement(sql)) {
@@ -44,7 +45,8 @@ public class DataBaseManager {
             statement.setString(4, p.getBrand());
             statement.setString(5, p.getColor());
             statement.setString(6, p.getImageUrl());
-            statement.setString(7, p.getDate());
+            statement.setString(7, p.getProductUrl());
+            statement.setString(8, p.getDate());
 
             statement.executeUpdate();
 

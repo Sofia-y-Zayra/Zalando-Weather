@@ -6,13 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="clases organizadas (falta hacer qeu scrapee el enlace de las prendas)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventStoreBuilder/src/main/java/org/ulpgc/control/EventConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/EventStoreBuilder/src/main/java/org/ulpgc/control/EventConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventStoreBuilder/target/classes/org/ulpgc/control/EventConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/EventStoreBuilder/target/classes/org/ulpgc/control/EventConsumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/ColorMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/ColorMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/datamart_final.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventSubscriber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/OutfitBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/OutfitBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/test/java/ColorMatcherTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/control/EventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/control/EventPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/model/scraper/ZalandoScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/model/scraper/ZalandoScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/persistence/DatamartStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/persistence/DatamartStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/persistence/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/persistence/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/view/RecommendationPageBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/view/RecommendationPageBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/control/ProductParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/control/ProductParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/persistence/DataBaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/persistence/DataBaseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datamart_final.db" beforeDir="false" afterPath="$PROJECT_DIR$/datamart_final.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -257,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778940004680</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="clases organizadas (falta hacer qeu scrapee el enlace de las prendas)">
+      <option name="closed" value="true" />
+      <created>1778946299428</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1778946299428</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

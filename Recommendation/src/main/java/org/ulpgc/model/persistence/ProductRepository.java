@@ -18,7 +18,7 @@ public class ProductRepository {
 
         String sql = """
             INSERT OR REPLACE INTO product_catalog
-            VALUES(?,?,?,?,?,?,?,?)
+            VALUES(?,?,?,?,?,?,?,?,?)
         """;
 
         try (Connection conn = db.getConnection();
@@ -33,7 +33,8 @@ public class ProductRepository {
             ps.setString(5, p.getBrand());
             ps.setString(6, p.getColor().name());
             ps.setString(7, p.getImageUrl());
-            ps.setString(8, ts);
+            ps.setString(8, p.getProductUrl());
+            ps.setString(9, ts);
 
             ps.executeUpdate();
 
@@ -63,6 +64,7 @@ public class ProductRepository {
                 p.setBrand(rs.getString("brand"));
                 p.setColor(ColorType.valueOf(rs.getString("color")));
                 p.setImageUrl(rs.getString("imageUrl"));
+                p.setProductUrl(rs.getString("productUrl"));
 
                 list.add(p);
             }

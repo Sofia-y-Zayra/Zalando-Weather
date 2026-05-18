@@ -8,6 +8,7 @@ public class Product {
     private String color;
     private String imageUrl;
     private String date;
+    private String productUrl;
 
 
     public String getName() {
@@ -64,5 +65,13 @@ public class Product {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getProductUrl() {
+        return productUrl;
+    }
+
+    public void setProductUrl(String productUrl) {
+        this.productUrl = productUrl;
     }
 }

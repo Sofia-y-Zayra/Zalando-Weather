@@ -61,6 +61,15 @@ public class ProductParser {
                 base64Image = ImageUtils.imageToBase64(imgUrl);
             } catch (Exception ignored) {}
 
+            String productUrl = "";
+            try {
+
+                productUrl =
+                        item.findElement(By.cssSelector("a"))
+                                .getAttribute("href");
+
+            } catch (Exception ignored) {}
+
             Product p = new Product();
             p.setName(name);
             p.setBrand(brand);
@@ -68,6 +77,7 @@ public class ProductParser {
             p.setColor(color.name());
             p.setImageUrl(base64Image);
             p.setCategory(category.name());
+            p.setProductUrl(productUrl);
             p.setDate(java.time.LocalDate.now().toString());
 
             return p;

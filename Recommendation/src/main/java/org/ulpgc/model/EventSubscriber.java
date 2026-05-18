@@ -78,7 +78,6 @@ public class EventSubscriber {
                         ActiveMQConfig.SUB_WEATHER
                 );
 
-        // PRODUCTOS
 
         productConsumer.setMessageListener(message -> {
 
@@ -105,7 +104,6 @@ public class EventSubscriber {
             }
         });
 
-        // WEATHER
 
         weatherConsumer.setMessageListener(message -> {
 

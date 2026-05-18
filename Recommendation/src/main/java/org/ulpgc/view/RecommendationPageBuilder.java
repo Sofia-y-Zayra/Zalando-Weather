@@ -289,13 +289,30 @@ public class RecommendationPageBuilder {
                 <h3>%s</h3>
 
                 <div class='price'>%.2f €</div>
+                
+                <a href="%s"
+                   target="_blank"
+                   style="
+                      display:inline-block;
+                      margin-top:10px;
+                      text-decoration:none;
+                      color:white;
+                      background:black;
+                      padding:10px 15px;
+                      border-radius:10px;
+                   ">
+            
+                   Ver producto
+            
+                </a>
 
             </div>
             """,
                 label,
                 p.getImageUrl(),
                 p.getName(),
-                p.getPrice()
+                p.getPrice(),
+                p.getProductUrl()
         );
     }
 }

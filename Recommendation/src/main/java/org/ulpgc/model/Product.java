@@ -9,6 +9,7 @@ public class Product {
     private String brand;
     private ColorType colorType;
     private String imageUrl;
+    private String productUrl;
 
     public String getName() {
         return name;
@@ -56,5 +57,13 @@ public class Product {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getProductUrl() {
+        return productUrl;
+    }
+
+    public void setProductUrl(String productUrl) {
+        this.productUrl = productUrl;
     }
 }
