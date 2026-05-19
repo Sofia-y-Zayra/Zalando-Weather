@@ -1,6 +1,6 @@
-package org.ulpgc.model.persistence;
+package org.ulpgc.control.persistence;
 
-import org.ulpgc.model.ColorType;
+import org.ulpgc.control.utils.ColorType;
 import org.ulpgc.model.Product;
 
 import java.sql.*;

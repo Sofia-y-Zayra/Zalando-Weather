@@ -1,6 +1,11 @@
-package org.ulpgc.model;
+package org.ulpgc.control;
 
-import org.ulpgc.model.utils.WeatherParser;
+import org.ulpgc.control.utils.ColorType;
+import org.ulpgc.control.utils.WeatherParser;
+import org.ulpgc.control.utils.WeatherType;
+import org.ulpgc.model.ColorMatching;
+import org.ulpgc.model.Outfit;
+import org.ulpgc.model.Product;
 
 import java.util.List;
 
@@ -56,7 +61,7 @@ public class OutfitBuilder {
         } else {
 
             List<ColorType> weatherColors =
-                    ColorMatcher.colorsByWeather(
+                    ColorMatching.colorsByWeather(
                             weather
                     );
 
@@ -119,7 +124,7 @@ public class OutfitBuilder {
         if (top != null) {
 
             List<ColorType> validPantColors =
-                    ColorMatcher.matchBottoms(
+                    ColorMatching.matchBottoms(
                             top.getColor()
                     );
 

@@ -1,4 +1,4 @@
-package org.ulpgc.model.persistence;
+package org.ulpgc.control.persistence;
 
 import java.sql.*;
 

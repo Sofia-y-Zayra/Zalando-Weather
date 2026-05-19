@@ -2,10 +2,9 @@ package org.ulpgc.control;
 
 import io.javalin.Javalin;
 import org.ulpgc.model.Outfit;
-import org.ulpgc.model.RecommendationService;
 import org.ulpgc.view.RecommendationPageBuilder;
-import org.ulpgc.model.persistence.DatamartStore;
-import org.ulpgc.model.persistence.WeatherRepository;
+import org.ulpgc.control.persistence.DatamartStore;
+import org.ulpgc.control.persistence.WeatherRepository;
 
 public class RecommendationAPI {
 

@@ -1,5 +1,3 @@
-package view;
-
 import control.EventPublisher;
 import control.WeatherController;
 import control.WheatherApiConsumer;

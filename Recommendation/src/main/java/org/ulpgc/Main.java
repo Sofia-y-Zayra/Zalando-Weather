@@ -1,9 +1,9 @@
 package org.ulpgc;
 
 import org.ulpgc.control.RecommendationAPI;
-import org.ulpgc.model.EventStoreLoader;
-import org.ulpgc.model.EventSubscriber;
-import org.ulpgc.model.persistence.DatamartStore;
+import org.ulpgc.control.EventStoreLoader;
+import org.ulpgc.control.EventSubscriber;
+import org.ulpgc.control.persistence.DatamartStore;
 
 public class Main {
 

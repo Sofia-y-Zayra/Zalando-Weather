@@ -1,6 +1,8 @@
 package org.ulpgc.model;
 
 
+import org.ulpgc.control.utils.ColorType;
+
 public class Product {
 
     private String name;

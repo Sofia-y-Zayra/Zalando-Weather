@@ -1,4 +1,4 @@
-package org.ulpgc.model;
+package org.ulpgc.control.utils;
 
 public enum ColorType {
     NEGRO,

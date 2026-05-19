@@ -1,8 +1,8 @@
 import org.junit.Test;
-import org.ulpgc.model.ColorType;
+import org.ulpgc.control.utils.ColorType;
 import org.ulpgc.model.Outfit;
 import org.ulpgc.model.Product;
-import org.ulpgc.model.OutfitBuilder;
+import org.ulpgc.control.OutfitBuilder;
 
 import java.util.List;
 

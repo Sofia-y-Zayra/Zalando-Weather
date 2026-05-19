@@ -1,6 +1,4 @@
-package org.ulpgc.model.utils;
-
-import org.ulpgc.model.ColorType;
+package org.ulpgc.control.utils;
 
 
 public class ColorParser {

@@ -4,23 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="link introducido">
+    <list default="true" id="cae3921d-37ee-42d8-b5ce-f11a49890c73" name="Changes" comment="Trabajo finalizao y ordenado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/OutfitBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/OutfitBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/WeatherData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/utils/ColorParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/utils/ColorParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/utils/WeatherParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/utils/WeatherParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/RecommendationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/RecommendationAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/ActiveMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/ActiveMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/ColorMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/ColorMatching.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/ColorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/utils/ColorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventStoreLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventStoreLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventSubscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/OutfitBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/OutfitBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/RecommendationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/RecommendationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/WeatherType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/utils/WeatherType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/persistence/DatamartStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/persistence/DatamartStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/persistence/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/persistence/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/persistence/WeatherRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/persistence/WeatherRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/utils/ColorParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/utils/ColorParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/utils/WeatherParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/utils/WeatherParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Recommendation/src/test/java/ColorParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/test/java/ColorParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recommendation/src/test/java/OutfitBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/test/java/OutfitBuilderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Recommendation/src/test/java/WeatherParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recommendation/src/test/java/WeatherParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Weather_Project/src/main/java/control/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather_Project/src/main/java/control/WeatherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Weather_Project/src/main/java/model/WeatherTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather_Project/src/main/java/control/WeatherTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Weather_Project/src/main/java/model/WheatherApiConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather_Project/src/main/java/control/WheatherApiConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Weather_Project/src/main/java/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather_Project/src/main/java/view/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zalando/products.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/model/scraper/ZalandoScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/control/ZalandoScraper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/persistence/DataBaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zalando/src/main/java/org/ulpgc/dacd/persistence/DataBaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather_Project/src/main/java/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather_Project/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datamart_final.db" beforeDir="false" afterPath="$PROJECT_DIR$/datamart_final.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -284,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779142549664</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Trabajo finalizao y ordenado">
+      <option name="closed" value="true" />
+      <created>1779191919846</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1779191919846</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,14 +338,15 @@
     <MESSAGE value="eventstorebuilder creado dependencias separadas" />
     <MESSAGE value="clases organizadas (falta hacer qeu scrapee el enlace de las prendas)" />
     <MESSAGE value="link introducido" />
-    <option name="LAST_COMMIT_MESSAGE" value="link introducido" />
+    <MESSAGE value="Trabajo finalizao y ordenado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trabajo finalizao y ordenado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/model/EventSubscriber.java</url>
-          <line>8</line>
+          <url>file://$PROJECT_DIR$/Recommendation/src/main/java/org/ulpgc/control/EventSubscriber.java</url>
+          <line>10</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

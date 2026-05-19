@@ -1,9 +1,9 @@
-package org.ulpgc.model;
+package org.ulpgc.control;
 
 
 import javax.jms.*;
 import org.apache.activemq.ActiveMQConnectionFactory;
-import org.ulpgc.model.persistence.DatamartStore;
+import org.ulpgc.control.persistence.DatamartStore;
 
 public class EventSubscriber {
 

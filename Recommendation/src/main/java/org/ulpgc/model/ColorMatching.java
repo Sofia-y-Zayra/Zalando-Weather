@@ -1,9 +1,12 @@
 package org.ulpgc.model;
 
+import org.ulpgc.control.utils.ColorType;
+import org.ulpgc.control.utils.WeatherType;
+
 import java.util.Arrays;
 import java.util.List;
 
-public class ColorMatcher {
+public class ColorMatching {
 
     public static List<ColorType> colorsByWeather(
             WeatherType weather

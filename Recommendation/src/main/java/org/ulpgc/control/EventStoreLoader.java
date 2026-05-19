@@ -1,8 +1,8 @@
-package org.ulpgc.model;
+package org.ulpgc.control;
 
 
 
-import org.ulpgc.model.persistence.DatamartStore;
+import org.ulpgc.control.persistence.DatamartStore;
 
 import java.util.List;
 import java.util.Map;

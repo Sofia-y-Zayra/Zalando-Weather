@@ -1,9 +1,11 @@
-package org.ulpgc.model;
+package org.ulpgc.control;
 
 
-import org.ulpgc.model.persistence.DatamartStore;
-import org.ulpgc.model.persistence.ProductRepository;
-import org.ulpgc.model.persistence.WeatherRepository;
+import org.ulpgc.control.persistence.DatamartStore;
+import org.ulpgc.control.persistence.ProductRepository;
+import org.ulpgc.control.persistence.WeatherRepository;
+import org.ulpgc.model.Outfit;
+import org.ulpgc.model.Product;
 
 import java.util.List;
 

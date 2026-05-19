@@ -1,6 +1,4 @@
-package org.ulpgc.model.utils;
-
-import org.ulpgc.model.WeatherType;
+package org.ulpgc.control.utils;
 
 public class WeatherParser {
 

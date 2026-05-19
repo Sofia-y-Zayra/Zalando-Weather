@@ -1,11 +1,12 @@
-package org.ulpgc.model;
+package org.ulpgc.control;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import org.ulpgc.model.persistence.DatamartStore;
-import org.ulpgc.model.persistence.ProductRepository;
-import org.ulpgc.model.persistence.WeatherRepository;
-import org.ulpgc.model.utils.ColorParser;
+import org.ulpgc.control.persistence.DatamartStore;
+import org.ulpgc.control.persistence.ProductRepository;
+import org.ulpgc.control.persistence.WeatherRepository;
+import org.ulpgc.control.utils.ColorParser;
+import org.ulpgc.model.Product;
 
 public class EventHandler {
 
