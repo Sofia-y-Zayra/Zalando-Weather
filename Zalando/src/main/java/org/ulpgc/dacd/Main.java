@@ -2,7 +2,7 @@ package org.ulpgc.dacd;
 
 import org.ulpgc.dacd.persistence.DataBaseManager;
 import org.ulpgc.dacd.model.Product;
-import org.ulpgc.dacd.model.scraper.ZalandoScraper;
+import org.ulpgc.dacd.control.ZalandoScraper;
 
 import java.util.List;
 import java.util.concurrent.*;

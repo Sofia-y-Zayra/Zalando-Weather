@@ -2,8 +2,6 @@ package control;
 
 import model.Weather;
 import model.WeatherEvent;
-import model.WeatherTransformer;
-import model.WheatherApiConsumer;
 import org.json.JSONObject;
 
 import java.time.Instant;

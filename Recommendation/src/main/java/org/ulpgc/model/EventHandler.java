@@ -5,7 +5,7 @@ import com.google.gson.JsonParser;
 import org.ulpgc.model.persistence.DatamartStore;
 import org.ulpgc.model.persistence.ProductRepository;
 import org.ulpgc.model.persistence.WeatherRepository;
-import org.ulpgc.utils.ColorParser;
+import org.ulpgc.model.utils.ColorParser;
 
 public class EventHandler {
 

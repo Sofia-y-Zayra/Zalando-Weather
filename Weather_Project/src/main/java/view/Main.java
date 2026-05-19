@@ -2,7 +2,7 @@ package view;
 
 import control.EventPublisher;
 import control.WeatherController;
-import model.WheatherApiConsumer;
+import control.WheatherApiConsumer;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

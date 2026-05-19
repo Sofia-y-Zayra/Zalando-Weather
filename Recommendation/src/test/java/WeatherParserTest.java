@@ -1,6 +1,6 @@
 import org.junit.Test;
 import org.ulpgc.model.WeatherType;
-import org.ulpgc.utils.WeatherParser;
+import org.ulpgc.model.utils.WeatherParser;
 
 import static org.junit.Assert.assertEquals;
 

@@ -18,7 +18,7 @@ public class DataBaseManager {
                 "brand TEXT," +
                 "color TEXT," +
                 "imageUrl TEXT," +
-                "productUrl TEXT" +
+                "productUrl TEXT," +
                 "date TEXT" +
                 ")";
 

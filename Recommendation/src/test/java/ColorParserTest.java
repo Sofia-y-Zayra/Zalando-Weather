@@ -1,6 +1,6 @@
 import org.junit.Test;
 import org.ulpgc.model.ColorType;
-import org.ulpgc.utils.ColorParser;
+import org.ulpgc.model.utils.ColorParser;
 
 import static org.junit.Assert.assertEquals;
 

@@ -1,6 +1,6 @@
 package org.ulpgc.model;
 
-import org.ulpgc.utils.WeatherParser;
+import org.ulpgc.model.utils.WeatherParser;
 
 import java.util.List;
 
