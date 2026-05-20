@@ -1,3 +1,5 @@
+
+
 # Zalando Weather Stylist
 # 1. Descripción del proyecto y propuesta de valor
 Zalando Weather es una aplicación desarrollada en Java que genera recomendaciones de outfits personalizadas en función del clima y el género del usuario. El sistema combina información meteorológica obtenida desde la API OpenWeatherMap con productos extraídos mediante web scraping de la página web de Zalando.
@@ -52,8 +54,10 @@ git clone https://github.com/Sofia-y-Zayra/Zalando-Weather.git
 2º Ejecución del sistema
 - Iniciar ActiveMQ
 
-Antes de ejecutar los módulos es necesario iniciar el broker de ActiveMQ en la consola de nuestro ordenador:
+En caso de no tenerlo podemos descargarnoslo aqui: https://activemq.apache.org/components/classic/download/
 
+Antes de ejecutar los módulos es necesario iniciar el broker de ActiveMQ en la consola de nuestro ordenador:
+cd (y la ruta de donde tengamos el ActiveMQ descargado)\apache-activemq-6.2.4\bin
 activemq start
 
 - Ejecutar los feeders
@@ -298,4 +302,12 @@ También se aplican: el patrón Repository (ProductRepository, WeatherRepository
 
 
 
-# 9. Demostración
+
+
+
+
+
+
+
+
+
